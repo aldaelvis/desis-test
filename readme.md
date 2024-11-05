@@ -12,6 +12,7 @@ para una mejor legibilidad y código limpio.
 ### Instalación del proyecto
 - Llevar el proyecto a la carpeta de despliegue de apache (www, public, html)
 - Importar la base de datos en postgres a travez del archivo **backup.sql**
+- **Cambiar** las credencias de la base de datos al suyo en el archivo: `configuraciones/credenciales.php`
 
 ### Ejecución del programa
 
