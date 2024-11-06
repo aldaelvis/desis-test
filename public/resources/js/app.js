@@ -61,19 +61,25 @@ function submitForm() {
         const descripcion = document.getElementById('descripcion').value.trim();
 
 
-        const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,15}$/;
+        const regex = /^[A-Za-z0-9]+$/;
         const regexPrecio = /^[0-9]+(\.[0-9]{1,2})?$/;
 
         if (codigo === '') {
             alert('El código del producto no puede estar en blanco.');
             return false;
-        } else if (!regex.test(codigo)) {
-            alert("El código del producto debe contener letras y números");
-            return false;
-        } else if (codigo.length < 5 || codigo.length > 15) {
+        }
+
+        if (codigo.length < 5 || codigo.length > 15) {
             alert("El código del producto debe tener entre 5 y 15 caracteres.");
             return false;
         }
+
+        if (!regex.test(codigo)) {
+            alert("El código del producto debe contener letras y números");
+            return false;
+        }
+
+
 
         if (nombre.trim() === '') {
             alert("El nombre del producto no puede estar en blanco.");
