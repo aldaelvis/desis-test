@@ -61,7 +61,7 @@ function submitForm() {
         const descripcion = document.getElementById('descripcion').value.trim();
 
 
-        const regex = /^[A-Za-z0-9]+$/;
+        const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]+$/;
         const regexPrecio = /^[0-9]+(\.[0-9]{1,2})?$/;
 
         if (codigo === '') {
